@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
   <style>
     :root {
       --bg: #0b0f14;
@@ -56,9 +57,7 @@
       flex-wrap: wrap;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
 
     .btn {
       padding: 0.9rem 1.6rem;
@@ -102,10 +101,6 @@
       box-shadow: 0 20px 60px rgba(0,0,0,.45);
     }
 
-    .card h3 {
-      margin-top: 0;
-    }
-
     .card p {
       color: var(--muted);
       line-height: 1.6;
@@ -120,22 +115,17 @@
     .shot {
       aspect-ratio: 16 / 9;
       border-radius: 16px;
-      background: linear-gradient(135deg, #1e293b, #0f172a);
-      position: relative;
       overflow: hidden;
+      background-size: cover;
+      background-position: center;
+      box-shadow: 0 20px 60px rgba(0,0,0,.45);
     }
 
-    .shot::after {
-      content: 'Screenshot';
-      position: absolute;
-      inset: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #64748b;
-      font-weight: 600;
-      letter-spacing: .1em;
-    }
+    .chaos1 { background-image: url("./screenshot/chaos_1.png"); }
+    .chaos2 { background-image: url("./screenshot/chaos_2.png"); }
+
+    .more1  { background-image: url("./screenshot/morechaos_1.png"); }
+    .more2  { background-image: url("./screenshot/morechaos_2.png"); }
 
     footer {
       padding: 3rem 1rem;
@@ -144,9 +134,13 @@
       border-top: 1px solid #1f2937;
     }
 
-    footer a { color: var(--accent2); text-decoration: none; }
+    footer a {
+      color: var(--accent2);
+      text-decoration: none;
+    }
   </style>
 </head>
+
 <body>
   <header>
     <div>
@@ -169,6 +163,7 @@
           <a class="btn" href="#download-texture">Download</a>
         </div>
       </div>
+
       <div class="card">
         <h3>2muu Texture More Chaos</h3>
         <p>全ブロック、全アイテムを1pxごとににむのスキンの顔にしただけ。それだけ。</p>
@@ -183,16 +178,16 @@
   <section id="chaos">
     <h2>2muu Texture Chaos – Screenshots</h2>
     <div class="screenshots">
-      <div class="shot"></div>
-      <div class="shot"></div>
+      <div class="shot chaos1"></div>
+      <div class="shot chaos2"></div>
     </div>
   </section>
 
   <section id="more">
     <h2>2muu Texture More Chaos – Screenshots</h2>
     <div class="screenshots">
-      <div class="shot"></div>
-      <div class="shot"></div>
+      <div class="shot more1"></div>
+      <div class="shot more2"></div>
     </div>
   </section>
 
@@ -204,6 +199,7 @@
         <p>対応: Java Edition 1.8.9</p>
         <a class="btn" href="./texture/§b2muu§r_§6texture§r_§5chaos§r_§fv3.0.zip">Download ZIP</a>
       </div>
+
       <div class="card">
         <h3>2muu Texture More Chaos</h3>
         <p>対応: Java Edition 1.8.9</p>
