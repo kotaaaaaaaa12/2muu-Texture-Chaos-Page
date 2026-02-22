@@ -285,6 +285,25 @@
       modal.classList.remove("active");
     }
   });
+
+  document.addEventListener('click', function(e){
+  const x = e.clientX, y = e.clientY;
+  const el = document.createElement('span');
+  el.style.position='fixed';
+  el.style.left = x+'px';
+  el.style.top = y+'px';
+  el.style.width = el.style.height = '12px';
+  el.style.borderRadius='50%';
+  el.style.background='radial-gradient(circle, rgba(110,231,183,0.9), rgba(96,165,250,0.7))';
+  el.style.opacity='0.9';
+  el.style.zIndex=10000;
+  el.style.transform='translate(-50%,-50%) scale(0.6)';
+  el.style.transition='transform .8s ease-out, opacity .8s ease-out';
+  document.body.appendChild(el);
+  requestAnimationFrame(()=> el.style.transform='translate(-50%,-50%) scale(6)');
+  requestAnimationFrame(()=> el.style.opacity='0');
+  setTimeout(()=> el.remove(),900);
+});
 </script>
   <a href="./index.html" class="floating-link">Chaos Texture Page</a>
 </body>
