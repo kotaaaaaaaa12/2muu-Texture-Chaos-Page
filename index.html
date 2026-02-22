@@ -180,6 +180,29 @@
   text-align: center;
   cursor: pointer;
 }
+
+.floating-link{
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+
+  padding: 12px 18px;
+  border-radius: 999px;
+
+  background: linear-gradient(135deg,var(--accent),var(--accent2));
+  color:#000;
+  text-decoration:none;
+  font-weight:600;
+
+  box-shadow:0 10px 30px rgba(0,0,0,.4);
+  z-index:999;
+
+  transition:.2s;
+}
+
+.floating-link:hover{
+  transform: translateY(-3px);
+}
   </style>
 </head>
 
@@ -275,6 +298,7 @@
     </div>
   </section>
 
+  <a href="./chaosfont.html" class="floating-link">Chaos Font</a>
   <footer>
     <p>© 2026 2muu Texture Chaos Project</p>
     <p><a href="https://x.com/NIMU_MC">にむのTwitter</a> / <a href="https://www.youtube.com/@NIMU-Minecraft">にむのYouTube</a></p>
